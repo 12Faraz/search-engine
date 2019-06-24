@@ -217,7 +217,7 @@ but.addEventListener('click',searchfun);
 
 var numbers=[100,27,30,41,53];
 console.log(numbers.every(a=>a>20));
-*/
+
 var car=new Map([
 ['name','BMW'],
 ['color','black'],
@@ -236,6 +236,70 @@ console.log(y.next().value);
 console.log(y.next().value);
 console.log(y.next().value);
 
+const name="Faraz is walking in a park";
+console.log(name.startsWith("Far"));
+console.log(name.startsWith("az",3));
+console.log(name.endsWith("raz"));
+console.log(name.endsWith("walking",16));
+console.log(name.includes("Faraz"));
+console.log(name.includes("Faraz",2));|
+var email=document.getElementById("key");
+var button=document.getElementById("sb");
+email.value="";
+function validation(){
+	if(email.value.includes("@") && email.value.endsWith(".com")){
+        document.write("<b>Registered!"+email.value+" Successfully<b>");
+	}
+	else{
+		alert("Invaid Email");
+	}
+}
+
+button.addEventListener('click',validation)
+const name="Faraz is walkingf in a park";
+alert(name.toLowerCase());
+
+//console.log(verb.startsWith("man"));
+
+//console.log(verb.startsWith("is",4));
+
+//console.log(verb.endsWith("wal",10));
+//console.log(verb.includes("is",4));
+var email=document.getElementById("key");
+var button=document.getElementById("sb");
+
+function validator(){
+	if(email.value.includes("@") && email.value.endsWith(".com")){
+document.write(email.value+"  IS VALID");
+
+	}
+	else{
+		alert("INVALID EMAIL ADDRESS");
+	}
+}
+
+
+button.addEventListener('click',validator);*/
+
+const action="adasdas@gmail.com";
+const reg=/@gmail(?=.com)/; // @gmail should be followed by .com
+const reg1=/@gmail(?!.in)/; // @gmail shout not be followed by .in
+//here only @gmail is the part of match results
+const x=action.match(reg);
+const reg3=/(?<=@gmail).com/;// matches .com only if it is preceeded by @gmail
+const reg4=/(?<!@gmail).in/;// matches .in only if it is not proceeded by @gmail
+console.log(action.match(reg3));
+console.log((reg.test(action))); // matches RE with the actions string and returns TRUE or FALSE
+//alert(x);
+/*if(x==null){
+	alert("INVALID EMAIL");
+}
+else{
+	alert("valid email");
+}*/
+for(y in x){
+	console.log(x[y]);
+}
 
 
 
